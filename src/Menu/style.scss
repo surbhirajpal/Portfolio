@@ -1,0 +1,61 @@
+.main{
+    display: flex;
+    .menu-bar{
+        width: 130px !important;
+        .ant-menu{
+            background-color: #101010;
+            border: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .ant-menu-item{
+                color: #fff;
+                a{
+                    color: #fff;
+                }
+                i{
+                    font-size: 25px;
+                }
+                p{
+                    display: none;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color : #748ce4;
+                }
+                &:hover{
+                    i{
+                        display: none;
+
+                    }
+                    p{
+                        display: unset;
+                    }
+                }
+                &.no-text{
+                    i{
+                        font-size: 20px;
+                    }
+                    &:hover{
+                        i{
+                            font-size: 25px;
+                            display: unset;
+                            color : #748ce4;
+
+                        }
+                    }
+                }
+                &.ant-menu-item-selected{
+                    background-color: inherit;
+                    color: #748ce4;
+                }
+            }
+        }
+
+    }
+    .content{
+        width: 100%;
+    }
+    
+}
