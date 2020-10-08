@@ -1,34 +1,85 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import { Modal } from 'antd'
 import './styles.scss'
 import Image1 from '../mediaFiles/WebsiteDeveloper.jpg'
 import Image2 from '../mediaFiles/NationalTRT.jpg'
 import Image3 from '../mediaFiles/SPF.jpg'
 import Image4 from '../mediaFiles/genesAnalysis.jpg'
 import Image5 from '../mediaFiles/RestaurantBilling.jpg'
+import ProjectDetails from '../ProjectDetails/main'
 
+const data = [
+    {
+        title: 'Website Builder',
+        duration: '(05/2020 - 07/2020)',
+        image: Image1
+    }
+]
 class Main extends React.Component {
 
     constructor(props) {
         super(props)
+        this.state = {
+            visible1: false,
+            visible2: false
+        }
     }
+
+    showModal1 = () => {
+        this.setState({
+            visible1: true,
+        });
+    };
+    showModal2 = () => {
+        this.setState({
+            visible2: true,
+        });
+    };
+
+    //   handleOk = e => {
+    //     console.log(e);
+    //     this.setState({
+    //       visible1: false,
+    //     });
+    //   };
+
+    handleCancel1 = e => {
+        console.log(e);
+        this.setState({
+            visible1: false,
+        });
+    };
+    handleCancel2 = e => {
+        console.log(e);
+        this.setState({
+            visible2: false,
+        });
+    };
+
     render() {
         return (
             <div className="projects">
                 <div className="row">
                     <div className="col">
-                        <a href="" target="_blank">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front" style={{ 'backgroundImage': 'url(' + Image1 + ')' }}>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>Website Builder</p>
-                                        <p>(05/2020 - 07/2020)</p>
-                                    </div>
+                        <div class="flip-card" onClick={this.showModal1}>
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style={{ 'backgroundImage': 'url(' + Image1 + ')' }}>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Website Builder</p>
+                                    <p>(05/2020 - 07/2020)</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                        <Modal
+                            style={{ top: 20 }}
+                            title="Website Builder"
+                            visible={this.state.visible1}
+                            // onOk={this.handleOk}
+                            onCancel={this.handleCancel1}
+                        >
+                            <ProjectDetails project="p1"/>
+                        </Modal>
                     </div>
                     <div className="col">
                         <p></p>
@@ -70,18 +121,25 @@ class Main extends React.Component {
                         <p></p>
                     </div>
                     <div className="col">
-                        <a href="" target="_blank">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front" style={{ 'backgroundImage': 'url(' + Image4 + ')' }}>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>Qualitative Analysis and Detection of Genes</p>
-                                        <p>(07/2018 - 12/2018)</p>
-                                    </div>
+                        <div class="flip-card" onClick={this.showModal2}>
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style={{ 'backgroundImage': 'url(' + Image4 + ')' }}>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Qualitative Analysis and Detection of Genes</p>
+                                    <p>(07/2018 - 12/2018)</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                        <Modal
+                            style={{ top: 20 }}
+                            title="Qualitative Analysis and Detection of Genes"
+                            visible={this.state.visible2}
+                            // onOk={this.handleOk}
+                            onCancel={this.handleCancel2}
+                        >
+                            <ProjectDetails project="p2"/>
+                        </Modal>
                     </div>
                     <div className="col">
                         <p></p>

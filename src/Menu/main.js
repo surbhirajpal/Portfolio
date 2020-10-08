@@ -7,6 +7,7 @@ import Skills from '../Skills/main'
 import Projects from '../Projects/main'
 import Contact from '../Contact/main'
 import LinkToResume from '../mediaFiles/Surbhi_Resume.pdf'
+import { Link } from 'react-router-dom';
 
 
 
@@ -36,12 +37,12 @@ function MenuComponent() {
                 <Menu selectedKeys={selectedMenuItem} mode="vertical" >
                     <Menu.Item key="item1" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="home" /><p>HOME</p></Menu.Item>
                     <Menu.Item key="item2" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="user" /><p>ABOUT</p></Menu.Item>
-                    <Menu.Item key="item3" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="setting" /><p>SKILLS</p><p></p></Menu.Item>
+                    <Menu.Item key="item3" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="code" /><p>SKILLS</p><p></p></Menu.Item>
                     <Menu.Item key="item4" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="eye" /><p>PROJECTS</p></Menu.Item>
                     <Menu.Item key="item5" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="mail" /><p>CONTACT</p></Menu.Item>
                     <Menu.Item key="item6">
                         <a href={LinkToResume} target="_blank">
-                            <Icon type="profile" /><p>VIEW RESUME</p>
+                            <Icon type="profile" /><p>RESUME</p>
                         </a>
                     </Menu.Item>
                     <Menu.Item key="item7" className="no-text">
@@ -52,11 +53,6 @@ function MenuComponent() {
                     <Menu.Item key="item8" className="no-text">
                         <a href="https://github.com/surbhirajpal" target="_blank">
                             <Icon type="github" />
-                        </a>
-                    </Menu.Item>
-                    <Menu.Item key="item9" className="no-text">
-                        <a href="https://www.facebook.com/surbhi.rajpal.88" target="_blank">
-                            <Icon type="facebook" />
                         </a>
                     </Menu.Item>
                 </Menu>

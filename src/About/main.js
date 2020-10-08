@@ -19,14 +19,11 @@ class Main extends React.Component {
                                     <p className="heading color">About me<span>&lt;/h1&gt;</span></p>
                                 </p>
                                 <p className="detail">
-                                    I'm not so shy, but you can still say Hi!
+                                    Graduate of UIET, Panjab University(2020) , trying my best to make connections in IT industry
+                                    and seeking an opportunity suitable for my profile and be a member of skillful team.
                                 </p>
                                 <p className="detail">
-                                    Graduate of UIET, Panjab University(2020) , trying my best to make connections in information technology industry
-                                    and seeking an opportunity in a fun and challenging environment to utilize and grow my skills along with the organizational objective.
-                                </p>
-                                <p className="detail">
-                                    Well organized, confident individual with leadership qualities. Loves to dance and paint, particated in many competitions of same but won few! ;) .      
+                                    Well organized, confident individual with leadership qualities. Loves to dance and paint, participated in many competitions of same but won few! ;) .      
                                 </p>
                                 <p className="detail">
                                     Interested to work in field of frontend development, explore and expand my knowledge in other technologies as well.

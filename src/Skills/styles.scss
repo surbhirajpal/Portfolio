@@ -54,8 +54,8 @@
            
         @keyframes floating { 
             0% { transform: translate(0,  0px); } 
-            25%  { transform: translate(40px, 0px); } 
-            50%   { transform: translate(40px, 40px); }  
+            25%  { transform: translate(60px, 0px); } 
+            50%   { transform: translate(60px, 40px); }  
             75%   { transform: translate(-0px, 40px); }     
             100%   { transform: translate(0px, -0px); }        
         } 
