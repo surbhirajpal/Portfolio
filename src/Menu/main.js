@@ -8,6 +8,7 @@ import Projects from '../Projects/main'
 import Contact from '../Contact/main'
 import LinkToResume from '../mediaFiles/Surbhi_Resume.pdf'
 import { Link } from 'react-router-dom';
+import Image from '../mediaFiles/logoName.png'
 
 
 
@@ -35,6 +36,9 @@ function MenuComponent() {
         <div className="main">
             <div className="menu-bar" style={{ height: window.innerHeight }}>
                 <Menu selectedKeys={selectedMenuItem} mode="vertical" >
+                    <Menu.Item key="item1" onClick={(e) => setSelectedMenuItem(e.key)}>
+                        <img src={Image}/>
+                    </Menu.Item>
                     <Menu.Item key="item1" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="home" /><p>HOME</p></Menu.Item>
                     <Menu.Item key="item2" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="user" /><p>ABOUT</p></Menu.Item>
                     <Menu.Item key="item3" onClick={(e) => setSelectedMenuItem(e.key)}><Icon type="code" /><p>SKILLS</p><p></p></Menu.Item>
